@@ -1,0 +1,67 @@
+\documentclass[11pt]{book}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{graphicx}
+\begin{document}
+
+\chapter{Energy Conservation}
+
+\textbf{6.2} A mortar shell is to be fired from level ground so as to clear a flat topped building of height $h$ and width $a$. The mortar gun can be placed anywhere on the ground and can have any angle of elevation. What is the least projection speed that will allow the shell to clear the building? For the special case in which $h = \frac{1}{2}a$, find the optimum position for the mortar and the optimum elevation angle to clear the building.
+
+\textbf{Solution:}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{pics/6-6.png}
+\caption{Excercise 6.2}
+\label{fig:ex_6_2}
+\end{figure}
+
+As shown in Fig. \ref{fig:ex_6_2}, $AB$ is the root top. The shell is launched from $P$, and intersects with the roottop plane at $Q$ and $R$. The velocities of the shell at $P$ and $Q$ are $\mathbf{v_0}$ and $\mathbf{v_1}$ respectively, and the elevation angle $\alpha$ and $\theta$ respectively. Let $v_0=|\mathbf{v_0}|$ and $v_1=|\mathbf{v_1}|$. According to energy conservation, we have:
+
+\begin{equation}
+\frac{1}{2}mv_0^2 = \frac{1}{2}m v_1^2 + mgh
+\label{eq:ex_6_2_01}
+\end{equation}
+
+Thus, if we know the minimum speed $v_1$ that is needed, we can deduce the minimum of $v_0$. The time for the shell to move from $Q$ to $R$ is $\tau=\frac{2v_1\sin\theta}{g}$, thus we have
+
+\begin{equation}
+QR=\tau v_1\cos\theta=\frac{v_1^2\sin 2\theta}{g}
+\label{eq:ex_6_2_02}
+\end{equation}
+
+In order for the shell to clear the building, $QR$ must satisfy $QR \ge a$. Combining with Eq. \ref{eq:ex_6_2_02}, $v_1$ must satisfy the following inequality in order to clear the building:
+
+\begin{equation}
+v_1^2 \ge \frac{ga}{\sin 2\theta}
+\label{eq:ex_6_2_03}
+\end{equation}
+
+Clearly, $v_1$ reaches its minimum when the following two conditions are satisfied: 1) The Shell intersects the rooftop plane at $A$ and $B$, \emph{i.e.}, $Q=A$ and $R=B$; 2) $\theta=\pi/4$. Under these conditions, the minimum $v_1$ is:
+
+\begin{equation}
+(v_1)_{min} = \sqrt{ga}
+\label{eq:ex_6_2_04}
+\end{equation}
+
+According to Eq. \ref{eq:ex_6_2_01}, this implies that the minimum $v_0$ needed to clear to the building is:
+
+\begin{equation}
+(v_0)_{min} = \sqrt{g(a+2h)}
+\label{eq:ex_6_2_05}
+\end{equation}
+
+Consider the case $h=\frac{a}{2}$. When $v_0$ reaches its minimum, we must have $v_0=\sqrt{2ga}$, due to Eq. \ref{eq:ex_6_2_05}. Moreover, $v_0$ and $v_1$ must satisfy the following equality:
+
+\begin{equation}
+v_0\cos{\alpha} = v_1\cos{\theta}
+\label{eq:ex_6_2_06}
+\end{equation}
+
+Thus, the elevation angle when $v_0$ reaches its minimum is:
+
+\begin{equation}
+\alpha = \arccos{\frac{v_1}{v_0}\cos{\theta}} = \arccos{\frac{\sqrt{ga}}{\sqrt{2qa}}\frac{\sqrt{2}}{2}} = \frac{\pi}{3}
+\end{equation}
+\end{document}
+
